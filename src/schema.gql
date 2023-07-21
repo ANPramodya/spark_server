@@ -201,13 +201,19 @@ input UpdateSocialLinkInput {
 }
 
 input CreateWorkExperienceInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  company: String!
+  position: String!
+  startDate: DateTime!
+  endDate: DateTime
+  userID: String!
 }
 
 input UpdateWorkExperienceInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  company: String
+  position: String
+  startDate: DateTime
+  endDate: DateTime
+  userID: String
   id: Int!
 }
 
