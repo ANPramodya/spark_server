@@ -16,7 +16,7 @@ export class SkillService {
     return `This action returns a #${id} skill`;
   }
 
-  update(id: number, updateSkillInput: UpdateSkillInput) {
+  update(id: string, updateSkillInput: UpdateSkillInput) {
     return `This action updates a #${id} skill`;
   }
 
