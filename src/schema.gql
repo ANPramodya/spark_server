@@ -214,7 +214,7 @@ input UpdateWorkExperienceInput {
   startDate: DateTime
   endDate: DateTime
   userID: String
-  id: Int!
+  id: ID!
 }
 
 input CreateSkillInput {

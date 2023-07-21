@@ -16,7 +16,7 @@ export class WorkExperienceService {
     return `This action returns a #${id} workExperience`;
   }
 
-  update(id: number, updateWorkExperienceInput: UpdateWorkExperienceInput) {
+  update(id: string, updateWorkExperienceInput: UpdateWorkExperienceInput) {
     return `This action updates a #${id} workExperience`;
   }
 
