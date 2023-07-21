@@ -15,6 +15,6 @@ export class Skill {
   user: User;
 
   //UserId field (foriegn key)
-  @Field()
+
   userId: string;
 }

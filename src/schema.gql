@@ -23,8 +23,10 @@ type Post {
 }
 
 type Project {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  name: String!
+  description: String
+  user: User!
 }
 
 type Reply {
@@ -36,7 +38,6 @@ type Skill {
   id: ID!
   name: String!
   user: User!
-  userId: String!
 }
 
 type SocialLink {
@@ -225,9 +226,9 @@ input CreateSkillInput {
 }
 
 input UpdateSkillInput {
-  name: String
+  name: String!
   userId: String
-  id: Int!
+  id: ID!
 }
 
 input CreateProjectInput {
