@@ -33,8 +33,10 @@ type Reply {
 }
 
 type Skill {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  name: String!
+  user: User!
+  userId: String!
 }
 
 type SocialLink {
@@ -218,13 +220,13 @@ input UpdateWorkExperienceInput {
 }
 
 input CreateSkillInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  name: String!
+  userId: String!
 }
 
 input UpdateSkillInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  name: String
+  userId: String
   id: Int!
 }
 
