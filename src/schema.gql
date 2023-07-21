@@ -2,6 +2,61 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Achievement {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Comment {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Interest {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Post {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Project {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Reply {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Skill {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type SocialLink {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Sport {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type UserGroup {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type WorkExperience {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
 type User {
   id: ID!
   createdAt: DateTime!
@@ -16,67 +71,23 @@ type User {
   degreeProgram: String
   schoolLastAttended: String
   online: Boolean!
+  socialLinks: [SocialLink!]
+  workExperience: [WorkExperience!]
+  skills: [Skill!]
+  projects: [Project!]
+  interests: [Interest!]
+  achievements: [Achievement!]
+  sports: [Sport!]
+  posts: [Post!]
+  comments: [Comment!]
+  groups: [UserGroup!]
+  replies: [Reply!]
 }
 
 """
 A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 """
 scalar DateTime
-
-type Post {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type SocialLink {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type WorkExperience {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Skill {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Project {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Interest {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Achievement {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Sport {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Comment {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type UserGroup {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Reply {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
 
 type Query {
   user(id: Int!): User!
