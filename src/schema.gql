@@ -38,8 +38,10 @@ type Skill {
 }
 
 type SocialLink {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  type: String!
+  url: String!
+  user: User!
 }
 
 type Sport {
@@ -167,7 +169,7 @@ input UpdateUserInput {
   degreeProgram: String
   schoolLastAttended: String
   onine: Boolean
-  id: Int!
+  id: ID!
 }
 
 input CreatePostInput {
@@ -182,13 +184,15 @@ input UpdatePostInput {
 }
 
 input CreateSocialLinkInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  type: String!
+  url: String!
+  userId: String!
 }
 
 input UpdateSocialLinkInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  type: String
+  url: String
+  userId: String
   id: Int!
 }
 
