@@ -232,13 +232,15 @@ input UpdateSkillInput {
 }
 
 input CreateProjectInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  name: String!
+  description: String
+  userId: String!
 }
 
 input UpdateProjectInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  name: String
+  description: String
+  userId: String
   id: Int!
 }
 
