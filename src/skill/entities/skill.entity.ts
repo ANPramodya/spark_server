@@ -1,7 +1,20 @@
-import { ObjectType, Field, Int } from '@nestjs/graphql';
+import { ObjectType, Field, Int, ID } from '@nestjs/graphql';
+import { User } from 'src/user/entities/user.entity';
 
 @ObjectType()
 export class Skill {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  @Field(() => ID)
+  id: string;
+
+  @Field()
+  name: string;
+
+  //Relationship
+
+  @Field(() => User)
+  user: User;
+
+  //UserId field (foriegn key)
+  @Field()
+  userId: string;
 }
