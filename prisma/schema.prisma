@@ -20,7 +20,7 @@ model User {
   firstName          String
   lastName           String
   address            String?
-  contactnumber      String?
+  contactNumber      String?
   degreeProgram      String?
   schoolLastAttended String?
 

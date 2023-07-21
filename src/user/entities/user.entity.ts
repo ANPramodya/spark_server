@@ -1,40 +1,45 @@
-import { ObjectType, Field, Int } from '@nestjs/graphql';
+import { ObjectType, Field, Int, ID } from '@nestjs/graphql';
 
 @ObjectType()
 export class User {
-  @Field()
-  id: String;
+  @Field(() => ID)
+  id: string;
 
-  @Field()
+  @Field(() => Date)
   createdAt: Date;
 
   @Field()
   updatedAt: Date;
 
   @Field()
-  username: String;
+  username: string;
 
   @Field()
-  email: String;
+  email: string;
 
   @Field()
-  uniEmail: String;
+  uniEmail: string;
 
   @Field()
-  firstName: String;
+  firstName: string;
 
   @Field()
-  lastName: String;
+  lastName: string;
+
+  @Field({ nullable: true })
+  address?: string;
+
+  @Field({ nullable: true })
+  contactNumber?: String;
+
+  @Field({ nullable: true })
+  degreeProgram?: String;
+
+  @Field({ nullable: true })
+  schoolLastAttended?: String;
 
   @Field()
-  address: String;
+  online: boolean;
 
-  @Field()
-  contactNumber: String;
-
-  @Field()
-  degreeProgram: String;
-
-  @Field()
-  schoolLastAttended: String;
+  //Relationships
 }

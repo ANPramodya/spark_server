@@ -3,7 +3,7 @@
 # ------------------------------------------------------
 
 type User {
-  id: String!
+  id: ID!
   createdAt: DateTime!
   updatedAt: DateTime!
   username: String!
@@ -11,10 +11,11 @@ type User {
   uniEmail: String!
   firstName: String!
   lastName: String!
-  address: String!
-  contactNumber: String!
-  degreeProgram: String!
-  schoolLastAttended: String!
+  address: String
+  contactNumber: String
+  degreeProgram: String
+  schoolLastAttended: String
+  online: Boolean!
 }
 
 """
@@ -27,9 +28,69 @@ type Post {
   exampleField: Int!
 }
 
+type SocialLink {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type WorkExperience {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Skill {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Project {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Interest {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Achievement {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Sport {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Comment {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type UserGroup {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Reply {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
 type Query {
   user(id: Int!): User!
   post(id: Int!): Post!
+  socialLink(id: Int!): SocialLink!
+  workExperience(id: Int!): WorkExperience!
+  skill(id: Int!): Skill!
+  project(id: Int!): Project!
+  interest(id: Int!): Interest!
+  achievement(id: Int!): Achievement!
+  sport(id: Int!): Sport!
+  comment(id: Int!): Comment!
+  userGroup(id: Int!): UserGroup!
+  reply(id: Int!): Reply!
 }
 
 type Mutation {
@@ -39,6 +100,36 @@ type Mutation {
   createPost(createPostInput: CreatePostInput!): Post!
   updatePost(updatePostInput: UpdatePostInput!): Post!
   removePost(id: Int!): Post!
+  createSocialLink(createSocialLinkInput: CreateSocialLinkInput!): SocialLink!
+  updateSocialLink(updateSocialLinkInput: UpdateSocialLinkInput!): SocialLink!
+  removeSocialLink(id: Int!): SocialLink!
+  createWorkExperience(createWorkExperienceInput: CreateWorkExperienceInput!): WorkExperience!
+  updateWorkExperience(updateWorkExperienceInput: UpdateWorkExperienceInput!): WorkExperience!
+  removeWorkExperience(id: Int!): WorkExperience!
+  createSkill(createSkillInput: CreateSkillInput!): Skill!
+  updateSkill(updateSkillInput: UpdateSkillInput!): Skill!
+  removeSkill(id: Int!): Skill!
+  createProject(createProjectInput: CreateProjectInput!): Project!
+  updateProject(updateProjectInput: UpdateProjectInput!): Project!
+  removeProject(id: Int!): Project!
+  createInterest(createInterestInput: CreateInterestInput!): Interest!
+  updateInterest(updateInterestInput: UpdateInterestInput!): Interest!
+  removeInterest(id: Int!): Interest!
+  createAchievement(createAchievementInput: CreateAchievementInput!): Achievement!
+  updateAchievement(updateAchievementInput: UpdateAchievementInput!): Achievement!
+  removeAchievement(id: Int!): Achievement!
+  createSport(createSportInput: CreateSportInput!): Sport!
+  updateSport(updateSportInput: UpdateSportInput!): Sport!
+  removeSport(id: Int!): Sport!
+  createComment(createCommentInput: CreateCommentInput!): Comment!
+  updateComment(updateCommentInput: UpdateCommentInput!): Comment!
+  removeComment(id: Int!): Comment!
+  createUserGroup(createUserGroupInput: CreateUserGroupInput!): UserGroup!
+  updateUserGroup(updateUserGroupInput: UpdateUserGroupInput!): UserGroup!
+  removeUserGroup(id: Int!): UserGroup!
+  createReply(createReplyInput: CreateReplyInput!): Reply!
+  updateReply(updateReplyInput: UpdateReplyInput!): Reply!
+  removeReply(id: Int!): Reply!
 }
 
 input CreateUserInput {
@@ -58,6 +149,116 @@ input CreatePostInput {
 }
 
 input UpdatePostInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateSocialLinkInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateSocialLinkInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateWorkExperienceInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateWorkExperienceInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateSkillInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateSkillInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateProjectInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateProjectInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateInterestInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateInterestInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateAchievementInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateAchievementInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateSportInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateSportInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateCommentInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateCommentInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateUserGroupInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateUserGroupInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateReplyInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateReplyInput {
   """Example field (placeholder)"""
   exampleField: Int
   id: Int!
