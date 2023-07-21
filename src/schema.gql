@@ -190,10 +190,10 @@ input CreateSocialLinkInput {
 }
 
 input UpdateSocialLinkInput {
-  type: String
-  url: String
+  type: String!
+  url: String!
   userId: String
-  id: Int!
+  id: ID!
 }
 
 input CreateWorkExperienceInput {

@@ -16,7 +16,7 @@ export class SocialLinkService {
     return `This action returns a #${id} socialLink`;
   }
 
-  update(id: number, updateSocialLinkInput: UpdateSocialLinkInput) {
+  update(id: string, updateSocialLinkInput: UpdateSocialLinkInput) {
     return `This action updates a #${id} socialLink`;
   }
 
