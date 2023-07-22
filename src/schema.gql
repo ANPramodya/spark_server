@@ -3,8 +3,10 @@
 # ------------------------------------------------------
 
 type Achievement {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  title: String!
+  descrription: String
+  user: User!
 }
 
 type Comment {
