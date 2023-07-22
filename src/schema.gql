@@ -268,7 +268,7 @@ input UpdateAchievementInput {
   title: String
   description: String
   userId: String
-  id: Int!
+  id: String!
 }
 
 input CreateSportInput {

@@ -16,7 +16,7 @@ export class AchievementService {
     return `This action returns a #${id} achievement`;
   }
 
-  update(id: number, updateAchievementInput: UpdateAchievementInput) {
+  update(id: string, updateAchievementInput: UpdateAchievementInput) {
     return `This action updates a #${id} achievement`;
   }
 
