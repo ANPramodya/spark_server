@@ -40,6 +40,8 @@ type Reply {
   id: ID!
   createdAt: DateTime!
   text: String!
+  author: User!
+  comment: Comment!
 }
 
 type Comment {
@@ -335,12 +337,14 @@ input UpdateUserGroupInput {
 }
 
 input CreateReplyInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  text: String!
+  authorId: String!
+  commentId: String!
 }
 
 input UpdateReplyInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  text: String
+  authorId: String
+  commentId: String
   id: Int!
 }
