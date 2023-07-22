@@ -280,7 +280,7 @@ input CreateSportInput {
 input UpdateSportInput {
   name: String
   userId: String
-  id: Int!
+  id: String!
 }
 
 input CreateCommentInput {

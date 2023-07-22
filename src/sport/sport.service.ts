@@ -16,7 +16,7 @@ export class SportService {
     return `This action returns a #${id} sport`;
   }
 
-  update(id: number, updateSportInput: UpdateSportInput) {
+  update(id: string, updateSportInput: UpdateSportInput) {
     return `This action updates a #${id} sport`;
   }
 
