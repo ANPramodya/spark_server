@@ -259,13 +259,15 @@ input UpdateInterestInput {
 }
 
 input CreateAchievementInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  title: String!
+  description: String
+  userId: String!
 }
 
 input UpdateAchievementInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  title: String
+  description: String
+  userId: String
   id: Int!
 }
 
