@@ -4,7 +4,7 @@ import { InputType, Field, Int, PartialType, ID } from '@nestjs/graphql';
 
 @InputType()
 export class UpdateSkillInput extends PartialType(CreateSkillInput) {
-  @Field(() => ID)
+  @Field()
   @IsNotEmpty()
   id: string;
 

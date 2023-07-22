@@ -4,7 +4,7 @@ import { InputType, Field, Int, PartialType, ID } from '@nestjs/graphql';
 
 @InputType()
 export class UpdateSocialLinkInput extends PartialType(CreateSocialLinkInput) {
-  @Field(() => ID)
+  @Field()
   id: string;
 
   @Field()

@@ -176,7 +176,7 @@ input UpdateUserInput {
   degreeProgram: String
   schoolLastAttended: String
   onine: Boolean
-  id: ID!
+  id: String!
 }
 
 input CreatePostInput {
@@ -200,7 +200,7 @@ input UpdateSocialLinkInput {
   type: String!
   url: String!
   userId: String
-  id: ID!
+  id: String!
 }
 
 input CreateWorkExperienceInput {
@@ -228,7 +228,7 @@ input CreateSkillInput {
 input UpdateSkillInput {
   name: String!
   userId: String
-  id: ID!
+  id: String!
 }
 
 input CreateProjectInput {
