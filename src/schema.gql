@@ -300,13 +300,15 @@ input UpdateSportInput {
 }
 
 input CreateCommentInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  text: String!
+  authorId: String!
+  postId: String!
 }
 
 input UpdateCommentInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  text: String
+  authorId: String
+  postId: String
   id: Int!
 }
 
