@@ -13,8 +13,9 @@ type Comment {
 }
 
 type Interest {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  name: String!
+  user: User!
 }
 
 type Post {
@@ -245,13 +246,13 @@ input UpdateProjectInput {
 }
 
 input CreateInterestInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  name: String!
+  userId: String!
 }
 
 input UpdateInterestInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  name: String
+  userId: String
   id: Int!
 }
 
