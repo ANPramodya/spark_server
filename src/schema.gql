@@ -9,17 +9,6 @@ type Achievement {
   user: User!
 }
 
-type Comment {
-  """Example field (placeholder)"""
-  exampleField: Int!
-}
-
-type Interest {
-  id: ID!
-  name: String!
-  user: User!
-}
-
 type UserGroup {
   """Example field (placeholder)"""
   exampleField: Int!
@@ -41,16 +30,31 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+type Reply {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Comment {
+  id: ID!
+  createdAt: DateTime!
+  text: String!
+  author: User!
+  post: Post!
+  replies: [Reply!]!
+}
+
+type Interest {
+  id: ID!
+  name: String!
+  user: User!
+}
+
 type Project {
   id: ID!
   name: String!
   description: String
   user: User!
-}
-
-type Reply {
-  """Example field (placeholder)"""
-  exampleField: Int!
 }
 
 type Skill {
