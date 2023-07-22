@@ -1,7 +1,30 @@
-import { ObjectType, Field, Int } from '@nestjs/graphql';
+import { ObjectType, Field, Int, ID } from '@nestjs/graphql';
+import { IsString } from 'class-validator';
+import { User } from 'src/user/entities/user.entity';
 
 @ObjectType()
 export class Reply {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  @Field(() => ID)
+  id: string;
+
+  @Field(() => Date)
+  createdAt: Date;
+
+  @Field()
+  text: string;
+
+  //Relationships
+
+  //User Relationship
+  @Field(() => User)
+  author: User;
+
+  //authorId field (foreign key)
+  authorId: string;
+
+  @Field(() => Comment)
+  comment: Comment;
+
+  //commentId field (foreign key)
+  commentId: string;
 }

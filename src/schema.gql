@@ -37,8 +37,9 @@ type Post {
 }
 
 type Reply {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  createdAt: DateTime!
+  text: String!
 }
 
 type Comment {
