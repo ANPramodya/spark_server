@@ -16,7 +16,7 @@ export class UserGroupService {
     return `This action returns a #${id} userGroup`;
   }
 
-  update(id: number, updateUserGroupInput: UpdateUserGroupInput) {
+  update(id: string, updateUserGroupInput: UpdateUserGroupInput) {
     return `This action updates a #${id} userGroup`;
   }
 

@@ -330,7 +330,7 @@ input UpdateUserGroupInput {
   description: String
   iconUrl: String
   userId: String
-  id: Int!
+  id: String!
 }
 
 input CreateReplyInput {
