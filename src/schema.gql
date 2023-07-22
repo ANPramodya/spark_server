@@ -51,8 +51,9 @@ type SocialLink {
 }
 
 type Sport {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  name: String!
+  user: User!
 }
 
 type UserGroup {
