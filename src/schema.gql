@@ -319,13 +319,17 @@ input UpdateCommentInput {
 }
 
 input CreateUserGroupInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  name: String!
+  description: String
+  iconUrl: String
+  userId: String!
 }
 
 input UpdateUserGroupInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  name: String
+  description: String
+  iconUrl: String
+  userId: String
   id: Int!
 }
 
