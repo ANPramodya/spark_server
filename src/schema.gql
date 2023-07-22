@@ -253,7 +253,7 @@ input CreateInterestInput {
 input UpdateInterestInput {
   name: String
   userId: String
-  id: Int!
+  id: String!
 }
 
 input CreateAchievementInput {

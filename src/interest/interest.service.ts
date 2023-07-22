@@ -16,7 +16,7 @@ export class InterestService {
     return `This action returns a #${id} interest`;
   }
 
-  update(id: number, updateInterestInput: UpdateInterestInput) {
+  update(id: string, updateInterestInput: UpdateInterestInput) {
     return `This action updates a #${id} interest`;
   }
 
