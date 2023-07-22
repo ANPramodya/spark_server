@@ -10,9 +10,20 @@ type Achievement {
 }
 
 type UserGroup {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  description: String
+  iconUrl: String
+  users: [User!]!
+  posts: [Post!]!
 }
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
 
 type Post {
   id: ID!
@@ -24,11 +35,6 @@ type Post {
   group: UserGroup
   comments: [Comment!]!
 }
-
-"""
-A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
-"""
-scalar DateTime
 
 type Reply {
   """Example field (placeholder)"""
