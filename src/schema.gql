@@ -273,13 +273,13 @@ input UpdateAchievementInput {
 }
 
 input CreateSportInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  name: String!
+  userId: String!
 }
 
 input UpdateSportInput {
-  """Example field (placeholder)"""
-  exampleField: Int
+  name: String
+  userId: String
   id: Int!
 }
 
