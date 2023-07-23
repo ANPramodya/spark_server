@@ -185,7 +185,7 @@ input CreateUserInput {
   contactNumber: String
   degreeProgram: String
   schoolLastAttended: String
-  onine: Boolean!
+  online: Boolean!
 }
 
 input UpdateUserInput {
@@ -198,8 +198,9 @@ input UpdateUserInput {
   contactNumber: String
   degreeProgram: String
   schoolLastAttended: String
-  onine: Boolean
+  online: Boolean
   id: String!
+  onine: Boolean
 }
 
 input CreatePostInput {

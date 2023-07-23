@@ -37,5 +37,5 @@ export class CreateUserInput {
   schoolLastAttended?: string;
 
   @Field()
-  onine: boolean;
+  online: boolean;
 }
