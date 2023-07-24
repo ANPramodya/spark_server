@@ -8,10 +8,11 @@ export class PostService {
   constructor(private prisma: PrismaService) {}
   async create(createPostInput: CreatePostInput) {
     return await this.prisma.post.create({ data: { ...createPostInput } });
+    //TODO: authorID or grouId is a must
   }
 
-  findAll() {
-    return `This action returns all post`;
+  async findAll() {
+    return await this.prisma.post.findMany();
   }
 
   findOne(id: number) {

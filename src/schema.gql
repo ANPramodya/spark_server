@@ -124,6 +124,7 @@ type User {
 type Query {
   users: [User!]!
   user(id: ID!): User!
+  posts: [Post!]!
   post(id: Int!): Post!
   socialLink(id: Int!): SocialLink!
   workExperience(id: Int!): WorkExperience!
