@@ -143,8 +143,7 @@ type Mutation {
   updateUser(updateUserInput: UpdateUserInput!): User!
   removeUser(id: ID!): User!
   createPost(createPostInput: CreatePostInput!): Post!
-  updatePost(updatePostInput: UpdatePostInput!): Post!
-  removePost(id: Int!): Post!
+  removePost(id: ID!): Post!
   createSocialLink(createSocialLinkInput: CreateSocialLinkInput!): SocialLink!
   updateSocialLink(updateSocialLinkInput: UpdateSocialLinkInput!): SocialLink!
   removeSocialLink(id: Int!): SocialLink!
@@ -211,15 +210,6 @@ input CreatePostInput {
   imageUrl: String
   authorId: String
   groupId: String
-}
-
-input UpdatePostInput {
-  title: String
-  content: String
-  imageUrl: String
-  authorId: String
-  groupId: String
-  id: Int!
 }
 
 input CreateSocialLinkInput {

@@ -3,6 +3,7 @@ import { CreatePostInput } from './dto/create-post.input';
 import { UpdatePostInput } from './dto/update-post.input';
 import { PrismaService } from 'src/prisma/prisma.service';
 
+//TODO: try catch exceptions (id not found)
 @Injectable()
 export class PostService {
   constructor(private prisma: PrismaService) {}
@@ -24,11 +25,12 @@ export class PostService {
     });
   }
 
-  update(id: number, updatePostInput: UpdatePostInput) {
-    return `This action updates a #${id} post`;
-  }
+  //no updating allowed
+  // update(id: number, updatePostInput: UpdatePostInput) {
+  //   return `This action updates a #${id} post`;
+  // }
 
-  remove(id: number) {
-    return `This action removes a #${id} post`;
+  async remove(id: string) {
+    return await this.prisma.post.delete({ where: { id } });
   }
 }

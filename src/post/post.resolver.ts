@@ -23,13 +23,14 @@ export class PostResolver {
     return this.postService.findOne(id);
   }
 
-  @Mutation(() => Post)
-  updatePost(@Args('updatePostInput') updatePostInput: UpdatePostInput) {
-    return this.postService.update(updatePostInput.id, updatePostInput);
-  }
+  //No Updating allowed
+  // @Mutation(() => Post)
+  // updatePost(@Args('updatePostInput') updatePostInput: UpdatePostInput) {
+  //   return this.postService.update(updatePostInput.id, updatePostInput);
+  // }
 
   @Mutation(() => Post)
-  removePost(@Args('id', { type: () => Int }) id: number) {
+  removePost(@Args('id', { type: () => ID }) id: string) {
     return this.postService.remove(id);
   }
 }
