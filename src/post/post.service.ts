@@ -13,10 +13,15 @@ export class PostService {
 
   async findAll() {
     return await this.prisma.post.findMany();
+    //TODO:find according to a user specific pattern (relevence)
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} post`;
+  async findOne(id: string) {
+    return this.prisma.post.findUnique({
+      where: {
+        id,
+      },
+    });
   }
 
   update(id: number, updatePostInput: UpdatePostInput) {
