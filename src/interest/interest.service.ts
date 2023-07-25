@@ -1,11 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { CreateInterestInput } from './dto/create-interest.input';
 import { UpdateInterestInput } from './dto/update-interest.input';
+import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class InterestService {
-  create(createInterestInput: CreateInterestInput) {
-    return 'This action adds a new interest';
+  constructor(private prisma: PrismaService) {}
+  async create(createInterestInput: CreateInterestInput) {
+    return await this.prisma.interest.create({
+      data: { ...createInterestInput },
+    });
+    //TODO:try catch
   }
 
   findAll() {
