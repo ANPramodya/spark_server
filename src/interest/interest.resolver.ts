@@ -41,7 +41,7 @@ export class InterestResolver {
   }
 
   @Mutation(() => Interest)
-  removeInterest(@Args('id', { type: () => Int }) id: number) {
+  removeInterest(@Args('id', { type: () => ID }) id: string) {
     return this.interestService.remove(id);
   }
 }

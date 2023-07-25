@@ -160,7 +160,7 @@ type Mutation {
   removeProject(id: Int!): Project!
   createInterest(createInterestInput: CreateInterestInput!): Interest!
   updateInterest(updateInterestInput: UpdateInterestInput!): Interest!
-  removeInterest(id: Int!): Interest!
+  removeInterest(id: ID!): Interest!
   createAchievement(createAchievementInput: CreateAchievementInput!): Achievement!
   updateAchievement(updateAchievementInput: UpdateAchievementInput!): Achievement!
   removeAchievement(id: Int!): Achievement!

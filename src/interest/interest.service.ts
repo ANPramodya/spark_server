@@ -32,7 +32,7 @@ export class InterestService {
     });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} interest`;
+  async remove(id: string) {
+    return await this.prisma.interest.delete({ where: { id } });
   }
 }
