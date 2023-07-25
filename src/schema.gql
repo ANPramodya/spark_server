@@ -130,6 +130,7 @@ type Query {
   workExperience(id: Int!): WorkExperience!
   skill(id: Int!): Skill!
   project(id: Int!): Project!
+  interests: [Interest!]!
   interest(id: Int!): Interest!
   achievement(id: Int!): Achievement!
   sport(id: Int!): Sport!

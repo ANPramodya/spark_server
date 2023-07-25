@@ -13,8 +13,8 @@ export class InterestService {
     //TODO:try catch
   }
 
-  findAll() {
-    return `This action returns all interest`;
+  async findAll() {
+    return this.prisma.interest.findMany();
   }
 
   findOne(id: number) {

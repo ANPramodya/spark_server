@@ -9,11 +9,13 @@ export class InterestResolver {
   constructor(private readonly interestService: InterestService) {}
 
   @Mutation(() => Interest)
-  createInterest(@Args('createInterestInput') createInterestInput: CreateInterestInput) {
+  createInterest(
+    @Args('createInterestInput') createInterestInput: CreateInterestInput,
+  ) {
     return this.interestService.create(createInterestInput);
   }
 
-  @Query(() => [Interest], { name: 'interest' })
+  @Query(() => [Interest], { name: 'interests' })
   findAll() {
     return this.interestService.findAll();
   }
@@ -24,8 +26,13 @@ export class InterestResolver {
   }
 
   @Mutation(() => Interest)
-  updateInterest(@Args('updateInterestInput') updateInterestInput: UpdateInterestInput) {
-    return this.interestService.update(updateInterestInput.id, updateInterestInput);
+  updateInterest(
+    @Args('updateInterestInput') updateInterestInput: UpdateInterestInput,
+  ) {
+    return this.interestService.update(
+      updateInterestInput.id,
+      updateInterestInput,
+    );
   }
 
   @Mutation(() => Interest)
