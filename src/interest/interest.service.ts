@@ -21,6 +21,10 @@ export class InterestService {
     return `This action returns a #${id} interest`;
   }
 
+  async findUserInterests(userId: string) {
+    return await this.prisma.interest.findMany({ where: { userId } });
+  }
+
   update(id: string, updateInterestInput: UpdateInterestInput) {
     return `This action updates a #${id} interest`;
   }

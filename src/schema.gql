@@ -132,6 +132,7 @@ type Query {
   project(id: Int!): Project!
   interests: [Interest!]!
   interest(id: Int!): Interest!
+  userInterests(userId: ID!): [Interest!]!
   achievement(id: Int!): Achievement!
   sport(id: Int!): Sport!
   comment(id: Int!): Comment!

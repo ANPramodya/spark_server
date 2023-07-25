@@ -1,4 +1,4 @@
-import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args, Int, ID } from '@nestjs/graphql';
 import { InterestService } from './interest.service';
 import { Interest } from './entities/interest.entity';
 import { CreateInterestInput } from './dto/create-interest.input';
@@ -23,6 +23,11 @@ export class InterestResolver {
   @Query(() => Interest, { name: 'interest' })
   findOne(@Args('id', { type: () => Int }) id: number) {
     return this.interestService.findOne(id);
+  }
+
+  @Query(() => [Interest], { name: 'userInterests' })
+  findUserInterests(@Args('userId', { type: () => ID }) userId: string) {
+    return this.interestService.findUserInterests(userId);
   }
 
   @Mutation(() => Interest)
